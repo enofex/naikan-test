@@ -12,7 +12,7 @@ import org.junit.jupiter.api.DynamicTest;
 import com.tngtech.archunit.ArchConfiguration;
 import com.tngtech.archunit.core.domain.JavaClasses;
 
-public final class ArchUnitTestConfig {
+public final class ArchUnitTestsConfig {
 
     private static final String DEFAULT_NAMESPACE = "io.naikan.";
 
@@ -21,7 +21,7 @@ public final class ArchUnitTestConfig {
     private final JavaClasses testClasses;
     private final List<DynamicTest> dynamicTests;
 
-    private ArchUnitTestConfig(ArchUnitTestConfigBuilder builder) {
+    private ArchUnitTestsConfig(ArchUnitTestConfigBuilder builder) {
         this.namespace = builder.getNamespace();
         this.classes = builder.getClasses();
         this.testClasses = builder.getTestClasses();
@@ -40,6 +40,10 @@ public final class ArchUnitTestConfig {
         return this.testClasses;
     }
 
+    public boolean addDynamicTest(DynamicTest test) {
+        return this.dynamicTests.add(test);
+    }
+
     public List<DynamicTest> getDynamicTests() {
         return this.dynamicTests;
     }
@@ -48,8 +52,8 @@ public final class ArchUnitTestConfig {
         return new ArchUnitTestConfigBuilder();
     }
 
-    public static ArchUnitTestConfig defaultConfig() {
-        return ArchUnitTestConfig.builder().build();
+    public static ArchUnitTestsConfig defaultConfig() {
+        return ArchUnitTestsConfig.builder().build();
     }
 
     public static final class ArchUnitTestConfigBuilder {
@@ -79,18 +83,13 @@ public final class ArchUnitTestConfig {
             return this.dynamicTests;
         }
 
-        public ArchUnitTestConfigBuilder addDynamicTest(DynamicTest test) {
-            this.dynamicTests.add(test);
-            return this;
-        }
-
-        public ArchUnitTestConfig build() {
+        public ArchUnitTestsConfig build() {
             ArchConfiguration.get().setProperty("archRule.failOnEmptyShould", Boolean.FALSE.toString());
 
             this.classes = Namespace.classes(this.namespace);
             this.testClasses = Namespace.testClasses(this.namespace);
 
-            ArchUnitTestConfig config = new ArchUnitTestConfig(this);
+            ArchUnitTestsConfig config = new ArchUnitTestsConfig(this);
 
             this.dynamicTests.add(namingRules(config));
             this.dynamicTests.add(cyclicRules(config));

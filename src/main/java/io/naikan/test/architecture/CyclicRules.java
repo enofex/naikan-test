@@ -10,7 +10,7 @@ final class CyclicRules {
     private CyclicRules() {
     }
 
-    static DynamicTest cyclicRules(ArchUnitTestConfig config) {
+    static DynamicTest cyclicRules(ArchUnitTestsConfig config) {
         return dynamicTest("There should be no cycles in the application",
                 () -> slices()
                         .matching(config.getNamespace() + ".(*)..")

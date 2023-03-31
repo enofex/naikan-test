@@ -10,7 +10,7 @@ final class NamingRules {
     private NamingRules() {
     }
 
-    static DynamicTest namingRules(ArchUnitTestConfig config) {
+    static DynamicTest namingRules(ArchUnitTestsConfig config) {
         return dynamicTest("Classes should not have names ending with Impl",
                 () -> noClasses()
                         .should().haveSimpleNameEndingWith("Impl")

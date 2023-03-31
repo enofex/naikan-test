@@ -20,7 +20,7 @@ final class TestingRules {
     private TestingRules() {
     }
 
-    static List<DynamicTest> testingRules(ArchUnitTestConfig config) {
+    static List<DynamicTest> testingRules(ArchUnitTestsConfig config) {
         return List.of(
                 dynamicTest("All test classes should be package private",
                         () -> classes()

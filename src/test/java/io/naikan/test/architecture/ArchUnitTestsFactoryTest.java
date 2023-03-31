@@ -2,7 +2,6 @@ package io.naikan.test.architecture;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Collection;
 
@@ -14,31 +13,25 @@ class ArchUnitTestsFactoryTest {
 
     @TestFactory
     Collection<DynamicTest> testArchitecture() {
-        return ArchUnitTestsFactory.createTests();
+        return ArchUnitTestsConfig.defaultConfig().getDynamicTests();
     }
 
     @Test
     void testCreateTestsDefaultConfig() {
-        Collection<DynamicTest> dynamicTests = ArchUnitTestsFactory.createTests();
+        ArchUnitTestsConfig config = ArchUnitTestsConfig.defaultConfig();
 
-        assertNotNull(dynamicTests);
-        assertEquals(6, dynamicTests.size());
+        assertNotNull(config.getDynamicTests());
+        assertEquals(6, config.getDynamicTests().size());
     }
 
     @Test
     void testCreateTestsWithConfig() {
-        ArchUnitTestConfig config = ArchUnitTestConfig.builder()
-                .addDynamicTest(DynamicTest.dynamicTest("Test", () -> {}))
-                .build();
+        ArchUnitTestsConfig config = ArchUnitTestsConfig.defaultConfig();
 
-        Collection<DynamicTest> dynamicTests = ArchUnitTestsFactory.createTests(config);
+        config.addDynamicTest(DynamicTest.dynamicTest("Test", () -> {}));
 
-        assertNotNull(dynamicTests);
-        assertEquals(7, dynamicTests.size());
+        assertNotNull(config.getDynamicTests());
+        assertEquals(7, config.getDynamicTests());
     }
 
-    @Test
-    void testCreateTestsWithNullConfig() {
-        assertThrows(NullPointerException.class, () -> ArchUnitTestsFactory.createTests(null));
-    }
 }
