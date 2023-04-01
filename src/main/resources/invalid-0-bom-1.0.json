@@ -1,0 +1,10 @@
+{
+  "bomFormat": "Naikan",
+  "project": {
+    "name": "Naikan",
+    "description": "Naikan core module",
+    "groupId": "io.naikan",
+    "artifactId": "naikan-core",
+    "version": "1.0.0"
+  }
+}
