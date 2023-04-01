@@ -31,7 +31,7 @@ class ArchUnitTestsFactoryTest {
         config.addDynamicTest(DynamicTest.dynamicTest("Test", () -> {}));
 
         assertNotNull(config.getDynamicTests());
-        assertEquals(7, config.getDynamicTests());
+        assertEquals(7, config.getDynamicTests().size());
     }
 
 }
