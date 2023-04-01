@@ -44,6 +44,10 @@ public final class ArchUnitTestsConfig {
         return this.dynamicTests.add(test);
     }
 
+    public boolean addDynamicTests(List<DynamicTest> tests) {
+        return this.dynamicTests.addAll(tests);
+    }
+
     public List<DynamicTest> getDynamicTests() {
         return this.dynamicTests;
     }
