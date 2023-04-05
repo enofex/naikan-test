@@ -4,10 +4,12 @@
   "timestamp": "2022-12-29T08:29:10.079226",
   "project": {
     "name": "Naikan I",
+    "repository": "https://github.com/naikan-projects",
     "groupId": "io.naikan",
     "artifactId": "naikan-core",
     "version": "1.0.0",
-    "description": "Naikan core module"
+    "description": "Naikan core module",
+    "notes": "Naikan notes"
   },
   "organization": {
     "name": "Naikan",
@@ -41,10 +43,13 @@
   "contacts": [
     {
       "name": "John Doe",
-      "title": "PO",
+      "title": "Product Owner",
       "email": "jdoe@example.com",
       "phone": "461-355-2912",
-      "description": "Responsible for this project"
+      "description": "Responsible for this project",
+      "roles": [
+        "PO"
+      ]
     }
   ],
   "technologies": [
