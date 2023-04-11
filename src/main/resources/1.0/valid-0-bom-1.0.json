@@ -5,6 +5,7 @@
   "project": {
     "name": "Naikan I",
     "repository": "https://github.com/naikan-projects",
+    "packaging": "jar",
     "groupId": "io.naikan",
     "artifactId": "naikan-core",
     "version": "1.0.0",
