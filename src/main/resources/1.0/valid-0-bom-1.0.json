@@ -19,6 +19,21 @@
     "department": "Software department",
     "description": "Company projects at a glance"
   },
+  "environments": [
+    {
+      "name": "Staging",
+      "location": "staging.naikan.io",
+      "description": "Staging description",
+      "tags": [
+        "Integration"
+      ]
+    },
+    {
+      "name": "Production",
+      "location": "naikan.io",
+      "description": "Production description"
+    }
+  ],
   "teams": [
     {
       "name": "Naikan Team",
