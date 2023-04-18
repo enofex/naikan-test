@@ -7,13 +7,13 @@ import org.junit.jupiter.api.DynamicTest;
 
 final class NamingRules {
 
-    private NamingRules() {
-    }
+  private NamingRules() {
+  }
 
-    static DynamicTest namingRules(ArchUnitTestsConfig config) {
-        return dynamicTest("Classes should not have names ending with Impl",
-                () -> noClasses()
-                        .should().haveSimpleNameEndingWith("Impl")
-                        .check(config.getClasses()));
-    }
+  static DynamicTest namingRules(ArchUnitTestsConfig config) {
+    return dynamicTest("Classes should not have names ending with Impl",
+        () -> noClasses()
+            .should().haveSimpleNameEndingWith("Impl")
+            .check(config.getClasses()));
+  }
 }

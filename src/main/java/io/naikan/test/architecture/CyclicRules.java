@@ -7,14 +7,14 @@ import org.junit.jupiter.api.DynamicTest;
 
 final class CyclicRules {
 
-    private CyclicRules() {
-    }
+  private CyclicRules() {
+  }
 
-    static DynamicTest cyclicRules(ArchUnitTestsConfig config) {
-        return dynamicTest("There should be no cycles in the application",
-                () -> slices()
-                        .matching(config.getNamespace() + ".(*)..")
-                        .should().beFreeOfCycles()
-                        .check(config.getClasses()));
-    }
+  static DynamicTest cyclicRules(ArchUnitTestsConfig config) {
+    return dynamicTest("There should be no cycles in the application",
+        () -> slices()
+            .matching(config.getNamespace() + ".(*)..")
+            .should().beFreeOfCycles()
+            .check(config.getClasses()));
+  }
 }
