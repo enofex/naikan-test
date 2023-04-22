@@ -1,0 +1,24 @@
+{
+  "specVersion": "1.0",
+  "bomFormat": "Naikan",
+  "project": {
+    "name": "Naikan II",
+    "description": "Naikan core module",
+    "groupId": "com.enofex",
+    "artifactId": "naikan-core",
+    "version": "1.0.0"
+  },
+  "deployments": [
+    {
+      "environment": "Staging",
+      "location": "staging.naikan.io",
+      "version": "2.0.0",
+      "timestamp": "2022-12-28T08:29:10.079226"
+    },
+    {
+      "environment": "Production",
+      "location": "naikan.io",
+      "version": "2.0.1"
+    }
+  ]
+}
