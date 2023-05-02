@@ -117,6 +117,19 @@
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>${maven-enforcer-plugin.version}</version>
           <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>20</version>
+                </requireJavaVersion>
+              </rules>    
+            </configuration>
+          </execution>
             <execution>
               <id>enforce-maven</id>
               <goals>
