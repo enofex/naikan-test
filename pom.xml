@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <prerequisites>
-    <maven>3.8.6</maven>
+    <maven>3.9.3</maven>
   </prerequisites>
 
   <modelVersion>4.0.0</modelVersion>
@@ -138,7 +138,7 @@
               <configuration>
                 <rules>
                   <requireMavenVersion>
-                    <version>3.8.6</version>
+                    <version>3.9.3</version>
                   </requireMavenVersion>
                 </rules>
               </configuration>
