@@ -2,7 +2,10 @@
 
 # The naikan-test module
 
-This module provides a set of tools and utilities for testing the naikan modules.
+This module provides a set of tools and utilities for testing the naikan modules:
+
+* [Naikan](https://github.com/enofex/naikan)
+* [Naikan Model](https://github.com/enofex/naikan-model)
 
 
 Maven Usage
