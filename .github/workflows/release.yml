@@ -43,6 +43,9 @@ jobs:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.JRELEASER_GITHUB_TOKEN }}
         run: ./mvnw --no-transfer-progress --batch-mode -Prelease deploy jreleaser:deploy
 
+      - name: Change README.md
+        run: sed -i '' 's|<version>[^<]*</version>|<version>${{ github.event.inputs.version }}</version>|' ./README.md
+
       - name: Set next version
         run: ./mvnw --no-transfer-progress --batch-mode build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion}-SNAPSHOT versions:commit
 
