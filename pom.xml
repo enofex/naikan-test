@@ -17,7 +17,7 @@
 
   <url>https://naikan.io</url>
   <description>
-    The naikan-test module provides a set of tools and utilities for testing naikan.
+    The Naikan Test Module for Naikan the software inventory management tool for dev teams driven by our CI/CD pipeline.
   </description>
 
   <properties>
