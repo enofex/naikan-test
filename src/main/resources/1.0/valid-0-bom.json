@@ -5,6 +5,7 @@
   "project": {
     "name": "Naikan I",
     "url": "https://naikan.io",
+    "inceptionYear": "2003",
     "repository": "https://github.com/enofex/naikan-projects",
     "packaging": "jar",
     "groupId": "com.enofex",
