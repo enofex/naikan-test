@@ -19,6 +19,5 @@ final class CycleImportRules {
                 .resideInAnyPackage("com.enofex.naikan.model")
                 .check(config.getClasses()))
     );
-
   }
 }
