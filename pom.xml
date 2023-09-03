@@ -39,7 +39,6 @@
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
     <maven-enforcer-plugin.version>3.4.0</maven-enforcer-plugin.version>
     <jreleaser-maven-plugin.version>1.8.0</jreleaser-maven-plugin.version>
-    <naikan-maven-plugin.version>0.1.4</naikan-maven-plugin.version>
   </properties>
 
   <dependencies>
@@ -126,7 +125,7 @@
             <configuration>
               <rules>
                 <requireJavaVersion>
-                  <version>20</version>
+                  <version>17</version>
                 </requireJavaVersion>
               </rules>    
             </configuration>
@@ -180,19 +179,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>com.enofex</groupId>
-        <artifactId>naikan-maven-plugin</artifactId>
-        <version>${naikan-maven-plugin.version}</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>aggregate</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
