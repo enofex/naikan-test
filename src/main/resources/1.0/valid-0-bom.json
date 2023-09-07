@@ -44,7 +44,7 @@
   "developers": [
     {
       "name": "Trev Cooksey",
-      "username" : "cytrev",
+      "username": "cytrev",
       "title": "Principal Software Engineer",
       "department": "Naikan Software Engineering",
       "email": "tcooksey1@geocities.jp",
@@ -164,5 +164,112 @@
       "location": "naikan.io",
       "version": "1.0.1"
     }
-  ]
+  ],
+  "repository": {
+    "name": "naikan",
+    "url": "git@github.com:enofex/naikan.git",
+    "firstCommit": {
+      "id": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
+      "timestamp": "2023-07-13T17:41:08",
+      "shortMessage": "Init commit",
+      "author": {
+        "name": "Trev Cooksey",
+        "email": "tcooksey1@geocities.jp"
+      },
+      "changes": {
+        "lines": {
+          "added": 46856,
+          "deleted": 0
+        },
+        "files": {
+          "added": 350,
+          "deleted": 0,
+          "changed": 0
+        }
+      }
+    },
+    "totalCommits": 3,
+    "defaultBranch": "main",
+    "branches": [
+      "refs/remotes/origin/HEAD",
+      "refs/remotes/origin/gh-pages",
+      "refs/remotes/origin/main"
+    ],
+    "tags": [
+      {
+        "name": "refs/tags/v0.0.1",
+        "timestamp": "2023-07-13T16:09:09"
+      },
+      {
+        "name": "refs/tags/v0.1.0",
+        "timestamp": "2023-07-16T10:29:08"
+      },
+      {
+        "name": "refs/tags/v0.2.0",
+        "timestamp": "2023-07-18T17:55:10"
+      }
+    ],
+    "commits": [
+      {
+        "id": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
+        "timestamp": "2023-07-13T17:41:08",
+        "shortMessage": "Init commit",
+        "author": {
+          "name": "Trev Cooksey",
+          "email": "tcooksey1@geocities.jp"
+        },
+        "changes": {
+          "lines": {
+            "added": 46856,
+            "deleted": 0
+          },
+          "files": {
+            "added": 350,
+            "deleted": 0,
+            "changed": 0
+          }
+        }
+      },
+      {
+        "id": "a208f58810a4ca17fb75da073e087454467d022a",
+        "timestamp": "2023-07-13T17:45:59",
+        "shortMessage": "Perform release 0.0.1",
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com"
+        },
+        "changes": {
+          "lines": {
+            "added": 7,
+            "deleted": 7
+          },
+          "files": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 6
+          }
+        }
+      },
+      {
+        "id": "a73f7fecad2b43e35126038ffc9407441d669d64",
+        "timestamp": "2023-07-13T17:47:35",
+        "shortMessage": "Prepare for next release",
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com"
+        },
+        "changes": {
+          "lines": {
+            "added": 7,
+            "deleted": 7
+          },
+          "files": {
+            "added": 0,
+            "deleted": 0,
+            "changed": 6
+          }
+        }
+      }
+    ]
+  }
 }
