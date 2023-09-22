@@ -169,7 +169,7 @@
     "name": "naikan",
     "url": "git@github.com:enofex/naikan.git",
     "firstCommit": {
-      "id": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
+      "commitId": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
       "timestamp": "2023-07-13T17:41:08",
       "shortMessage": "Init commit",
       "author": {
@@ -211,7 +211,7 @@
     ],
     "commits": [
       {
-        "id": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
+        "commitId": "4c2f7dbfab5aa133bab1ca8d0a09a49e3713e25a",
         "timestamp": "2023-07-13T17:41:08",
         "shortMessage": "Init commit",
         "author": {
@@ -231,7 +231,7 @@
         }
       },
       {
-        "id": "a208f58810a4ca17fb75da073e087454467d022a",
+        "commitId": "a208f58810a4ca17fb75da073e087454467d022a",
         "timestamp": "2023-07-13T17:45:59",
         "shortMessage": "Perform release 0.0.1",
         "author": {
@@ -251,7 +251,7 @@
         }
       },
       {
-        "id": "a73f7fecad2b43e35126038ffc9407441d669d64",
+        "commitId": "a73f7fecad2b43e35126038ffc9407441d669d64",
         "timestamp": "2023-07-13T17:47:35",
         "shortMessage": "Prepare for next release",
         "author": {
