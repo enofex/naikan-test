@@ -191,9 +191,15 @@
     "totalCommits": 3,
     "defaultBranch": "main",
     "branches": [
-      "refs/remotes/origin/HEAD",
-      "refs/remotes/origin/gh-pages",
-      "refs/remotes/origin/main"
+      {
+        "name": "refs/remotes/origin/HEAD"
+      },
+      {
+        "name": "refs/remotes/origin/gh-pages"
+      },
+      {
+        "name": "refs/remotes/origin/main"
+      }
     ],
     "tags": [
       {
