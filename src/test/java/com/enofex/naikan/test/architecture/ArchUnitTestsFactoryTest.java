@@ -13,7 +13,7 @@ class ArchUnitTestsFactoryTest {
     ArchUnitTestsConfig config = ArchUnitTestsConfig.defaultConfig();
 
     assertNotNull(config.getDynamicTests());
-    assertEquals(6, config.getDynamicTests().size());
+    assertEquals(12, config.getDynamicTests().size());
   }
 
   @Test
@@ -24,7 +24,7 @@ class ArchUnitTestsFactoryTest {
     }));
 
     assertNotNull(config.getDynamicTests());
-    assertEquals(7, config.getDynamicTests().size());
+    assertEquals(13, config.getDynamicTests().size());
   }
 
 }
