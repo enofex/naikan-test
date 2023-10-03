@@ -15,7 +15,7 @@ final class NoAutowiredFieldsRules {
   }
 
   static DynamicTest noAutowiredFieldsRules(ArchUnitTestsConfig config) {
-    return dynamicTest("No classes should use constructor injection",
+    return dynamicTest("Classes should use constructor injection",
         () -> fields().should(notBeAutowired())
             .check(config.getClasses()));
   }
