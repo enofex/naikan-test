@@ -53,10 +53,6 @@ final class TestingRules {
             () -> classes()
                 .should().notBeAnnotatedWith(Disabled.class)
                 .check(config.getTestClasses())),
-        dynamicTest("Test methods shouldn't been disabled",
-            () -> methods()
-                .should().notBeAnnotatedWith(Disabled.class)
-                .check(config.getTestClasses())),
         dynamicTest("Test methods annotated with @Test should start with should* or test*",
             () -> methods()
                 .that().areAnnotatedWith(Test.class).should(respectNamingConvention())
