@@ -31,8 +31,7 @@ final class NamingRules {
     return new ArchCondition<>("not be prefixed with I.") {
       @Override
       public void check(JavaClass clazz, ConditionEvents events) {
-        if ("I".equals(clazz.getSimpleName().charAt(0))
-            && Character.isUpperCase(clazz.getSimpleName().charAt(1))) {
+        if (clazz.getSimpleName().startsWith("I") && Character.isUpperCase(clazz.getSimpleName().charAt(1))) {
           events.add(SimpleConditionEvent.violated(clazz, clazz.getSimpleName()));
         }
       }
