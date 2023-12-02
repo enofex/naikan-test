@@ -17,6 +17,11 @@ final class ImportRules {
             () -> noClasses()
                 .should().accessClassesThat()
                 .resideInAnyPackage("..shaded..")
+                .check(config.getClasses())),
+        dynamicTest("No classes should have imports from Lombok project",
+            () -> noClasses()
+                .should().accessClassesThat()
+                .resideInAnyPackage("..lombok..")
                 .check(config.getClasses()))
     );
   }
