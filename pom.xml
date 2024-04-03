@@ -188,7 +188,7 @@
       <id>release</id>
       <properties>
         <altDeploymentRepository>
-          local::default::file:./target/staging-deploy
+          local::file:./target/staging-deploy
         </altDeploymentRepository>
       </properties>
       <build>
