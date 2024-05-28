@@ -1,7 +1,8 @@
 package com.enofex.naikan.test.architecture;
 
-import static com.enofex.naikan.test.architecture.CyclicRules.cyclicRules;
+import static com.enofex.naikan.test.architecture.CycleRules.cycleRules;
 import static com.enofex.naikan.test.architecture.ImportRules.importRules;
+import static com.enofex.naikan.test.architecture.LoggingRules.loggingRules;
 import static com.enofex.naikan.test.architecture.NamingRules.namingRules;
 import static com.enofex.naikan.test.architecture.TestingRules.testingRules;
 
@@ -94,10 +95,11 @@ public final class ArchUnitTestsConfig {
 
       ArchUnitTestsConfig config = new ArchUnitTestsConfig(this);
 
-      this.dynamicTests.add(cyclicRules(config));
+      this.dynamicTests.addAll(cycleRules(config));
       this.dynamicTests.addAll(namingRules(config));
       this.dynamicTests.addAll(importRules(config));
       this.dynamicTests.addAll(testingRules(config));
+      this.dynamicTests.addAll(loggingRules(config));
 
       return config;
     }
