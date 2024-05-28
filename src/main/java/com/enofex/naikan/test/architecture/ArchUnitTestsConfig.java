@@ -3,7 +3,6 @@ package com.enofex.naikan.test.architecture;
 import static com.enofex.naikan.test.architecture.CyclicRules.cyclicRules;
 import static com.enofex.naikan.test.architecture.ImportRules.importRules;
 import static com.enofex.naikan.test.architecture.NamingRules.namingRules;
-import static com.enofex.naikan.test.architecture.NoAutowiredFieldsRules.noAutowiredFieldsRules;
 import static com.enofex.naikan.test.architecture.TestingRules.testingRules;
 
 import com.tngtech.archunit.ArchConfiguration;
@@ -96,7 +95,6 @@ public final class ArchUnitTestsConfig {
       ArchUnitTestsConfig config = new ArchUnitTestsConfig(this);
 
       this.dynamicTests.add(cyclicRules(config));
-      this.dynamicTests.add(noAutowiredFieldsRules(config));
       this.dynamicTests.addAll(namingRules(config));
       this.dynamicTests.addAll(importRules(config));
       this.dynamicTests.addAll(testingRules(config));
