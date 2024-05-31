@@ -13,7 +13,7 @@ final class LoggingRules {
 
   static List<DynamicTest> loggingRules(ArchUnitTestsConfig config) {
     return List.of(
-        dynamicTest("No classes should have imports from naikan model",
+        dynamicTest("Log should be final private",
             () -> fields().that()
                 .haveRawType("org.apache.commons.logging.Log")
                 .should().bePrivate()
