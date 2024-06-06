@@ -27,7 +27,7 @@ final class TestingRules {
 
   static List<DynamicTest> testingRules(ArchUnitTestsConfig config) {
     return List.of(
-        dynamicTest("All test classes should be package private",
+        dynamicTest("All test classes should end with Test or IT",
             () -> classes()
                 .that().areNotInterfaces().and(nameMatching(".*Test").or(nameMatching(".*IT")))
                 .should(bePackagePrivate())
