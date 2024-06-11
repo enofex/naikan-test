@@ -15,6 +15,9 @@ class ArchitectureTest {
                 .classesShouldNotBeAnnotatedWithDisabled()
                 .methodsShouldNotBeAnnotatedWithDisabled()))
         .java(java -> java
+            .noUsageOfDeprecatedAPIs()
+            .utilityClassesShouldBeFinalAndHavePrivateConstructor()
+            .classesShouldImplementHashCodeAndEquals()
             .imports(imports -> imports
                 .shouldHaveNoCycles()
                 .shouldNotImport("..shaded..")
