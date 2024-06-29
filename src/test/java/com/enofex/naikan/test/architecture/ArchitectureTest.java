@@ -13,8 +13,14 @@ class ArchitectureTest {
         .test(test -> test
             .junit5(junit5 -> junit5
                 .classesShouldNotBeAnnotatedWithDisabled()
-                .methodsShouldNotBeAnnotatedWithDisabled()))
+                .classesShouldBePackagePrivate(".*Test")
+                .methodsShouldNotBeAnnotatedWithDisabled()
+                .methodsShouldBePackagePrivate()))
         .java(java -> java
+            .finalClassesShouldNotHaveProtectedMembers()
+            .fieldsShouldNotBePublic()
+            .methodsShouldNotDeclareGenericExceptions()
+            .serialVersionUIDFieldsShouldBeStaticFinalLong()
             .noUsageOfDeprecatedAPIs()
             .utilityClassesShouldBeFinalAndHavePrivateConstructor()
             .classesShouldImplementHashCodeAndEquals()
@@ -24,6 +30,8 @@ class ArchitectureTest {
                 .shouldNotImport("..lombok..")
                 .shouldNotImport("org.junit.."))
             .naming(naming -> naming
+                .packagesShouldMatch("com.enofex.naikan.model")
+                .constantsShouldFollowConventions()
                 .classesShouldNotMatch(".*Impl")
                 .interfacesShouldNotHavePrefixI()))
         .build();
