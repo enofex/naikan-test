@@ -17,6 +17,7 @@ class ArchitectureTest {
                 .methodsShouldNotBeAnnotatedWithDisabled()
                 .methodsShouldBePackagePrivate()))
         .java(java -> java
+            .classesShouldResideInPackage("com.enofex.naikan.model")
             .finalClassesShouldNotHaveProtectedMembers()
             .fieldsShouldNotBePublic()
             .methodsShouldNotDeclareGenericExceptions()
@@ -30,7 +31,6 @@ class ArchitectureTest {
                 .shouldNotImport("..lombok..")
                 .shouldNotImport("org.junit.."))
             .naming(naming -> naming
-                .packagesShouldMatch("com.enofex.naikan.model")
                 .constantsShouldFollowConventions()
                 .classesShouldNotMatch(".*Impl")
                 .interfacesShouldNotHavePrefixI()))
