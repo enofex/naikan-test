@@ -29,4 +29,4 @@ these [instructions](https://github.com/enofex/naikan/blob/main/CONTRIBUTING.md)
 
 ## Website
 
-Visit the [Naikan](https://naikan.io) Website for general information, demos and documentation.
+Visit the [Naikan](https://enofex.github.io/naikan/) Website for general information, demos and documentation.
