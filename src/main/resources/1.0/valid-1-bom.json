@@ -11,13 +11,13 @@
   "deployments": [
     {
       "environment": "Staging",
-      "location": "staging.naikan.io",
+      "location": "staging.enofex.github.io/naikan",
       "version": "2.0.0",
       "timestamp": "2022-12-28T08:29:10.079226"
     },
     {
       "environment": "Production",
-      "location": "naikan.io",
+      "location": "enofex.github.io/naikan",
       "version": "2.0.1"
     }
   ]
