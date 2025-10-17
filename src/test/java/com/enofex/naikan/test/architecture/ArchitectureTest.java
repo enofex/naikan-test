@@ -11,7 +11,7 @@ class ArchitectureTest {
     Taikai taikai = Taikai.builder()
         .namespace("com.enofex.naikan.model")
         .test(test -> test
-            .junit5(junit5 -> junit5
+            .junit(junit -> junit
                 .classesShouldNotBeAnnotatedWithDisabled()
                 .classesShouldBePackagePrivate(".*Test")
                 .methodsShouldNotBeAnnotatedWithDisabled()
