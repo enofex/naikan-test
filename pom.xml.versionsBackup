@@ -8,7 +8,7 @@
 
   <groupId>com.enofex</groupId>
   <artifactId>naikan-test</artifactId>
-  <version>1.5.1</version>
+  <version>1.5.1-SNAPSHOT</version>
   <name>Naikan Test Module</name>
   <inceptionYear>2024</inceptionYear>
 
