@@ -8,7 +8,7 @@ class ArchitectureTest {
 
   @Test
   void shouldFulfilConstrains() {
-    Taikai taikai = Taikai.builder()
+    Taikai.builder()
         .namespace("com.enofex.naikan.model")
         .test(test -> test
             .junit(junit -> junit
@@ -34,8 +34,7 @@ class ArchitectureTest {
                 .constantsShouldFollowConventions()
                 .classesShouldNotMatch(".*Impl")
                 .interfacesShouldNotHavePrefixI()))
-        .build();
-
-    taikai.check();
+        .build()
+        .checkAll();
   }
 }
