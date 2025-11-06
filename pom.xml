@@ -27,7 +27,7 @@
 
     <junit-jupiter.version>6.0.1</junit-jupiter.version>
     <archunit.version>1.4.0</archunit.version>
-    <taikai.version>1.41.0</taikai.version>
+    <taikai.version>1.42.0</taikai.version>
 
     <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
